@@ -17,12 +17,12 @@ apt install unzip
 
 Download the latest stable version of Consul from the official Consul Download Webpage using wget command.
 ```
-wget https://releases.hashicorp.com/consul/1.11.5/consul_1.11.5_linux_amd64.zip
+wget https://releases.hashicorp.com/consul/1.8.4/consul_1.8.4_linux_amd64.zip
 ```
 
 Now unzip the downloaded package to /usr/local/bin
 ```
-sudo unzip consul_1.11.5_linux_amd64.zip -d /usr/local/bin/
+sudo unzip consul_1.8.4_linux_amd64.zip -d /usr/local/bin/
 ```
 
 After installing Consul, verify that the installation worked by opening a new terminal session and running the command consul
@@ -69,7 +69,7 @@ Description=consul service
 WorkingDirectory=/etc/consul.d
 User=consul
 Group=consul
-ExecStart=/usr/local/bin/consul agent -ui   -data-dir /var/lib/consul -config-dir=/etc/consul.d
+ExecStart=/usr/local/bin/consul agent -ui -data-dir /var/lib/consul -config-dir=/etc/consul.d
 
 [Install]
 WantedBy=multi-user.target
